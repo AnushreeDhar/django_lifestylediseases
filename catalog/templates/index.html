@@ -1,0 +1,25 @@
+
+<li><a href="{% url 'index' %}">Home</a></li>
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>LifeStyle DiseasesHome</h1>
+
+  <p>Welcome to <em>diseases</em>, </p>
+
+<h2>Dynamic content</h2>
+
+  <p>The site has the following record counts:</p>
+  <ul>
+    <li><strong>Cardiovascular Diseases:</strong> {{ num_cd }}</li>
+    
+    <li><strong>diseases of cardiovascular in list:</strong> {{ num_instances_available }}</li>
+   
+  </ul>
+
+  <h2>Dynamic content</h2>
+
+
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}
