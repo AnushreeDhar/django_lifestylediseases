@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Add additional CSS in static file -->
-  {% load static %}
+ 
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
@@ -20,7 +21,7 @@
 
                   <div class="col-sm-2">
 
-                    {% block sidebar %}
+                   
 
                     <ul class="sidebar-nav">
 
@@ -28,11 +29,11 @@
                         <li><a href="">All diseases</a></li>
                         <li><a href="">all references</a></li>
                     </ul>
-                    {% endblock %}
+                    
                   </div>
 
                    <div class="col-sm-10 ">
-                  {% block content %}{% endblock %}
+                  
                 </div>
              </div>
              <div>
@@ -45,12 +46,19 @@
                         </tr>
                     
                         <tr>
-                            <td>Ischemia</td>
+                            <td>Inflammatory Heart Disease</td>
+                           
                             <td>Rheumatoid Arthiritis</td>
                             <td>Cholera</td>
+                            
                         </tr>
                         <tr>
-                            <td>Obesity</td>
+                            <td>
+                                <img src="{% static 'pics/ihd1.png' %}" class="responsive-img" style='max-height:100px;' >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aortic Aneurysm</td>
                             <td>SLE</td>
                             <td>MRSA</td>
                         </tr>
